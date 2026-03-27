@@ -6,9 +6,7 @@
 
 This project implements a simulated industry-style Big Data pipeline to analyze public transit efficiency in Toronto. As urban populations grow, the Toronto Transit Commission (TTC) faces significant challenges in maintaining schedule adherence. This pipeline addresses the problem of identifying high-frequency delay patterns and "recidivist" routes to support better resource allocation and commuter transparency.
 
-## ---
-
-**Tech Stack**
+## **Tech Stack**
 
 * **Runtime:** Java 11 (OpenJDK)  
 * **Processing Engine:** Apache Spark 3.x / PySpark  
@@ -16,9 +14,7 @@ This project implements a simulated industry-style Big Data pipeline to analyze 
 * **Language:** Python 3.10  
 * **Dataset:** TTC Bus Delay Data (2025–Present) via City of Toronto Open Data Portal
 
-## ---
-
-**Project Workflow (ETL)**
+## **Project Workflow (ETL)**
 
 The pipeline follows a strict **Extract, Transform, Load** workflow:
 
@@ -36,9 +32,7 @@ The pipeline follows a strict **Extract, Transform, Load** workflow:
 
 4. **Distributed Storage:** Processed insights are pushed into a schema-less MongoDB database, making them ready for real-world web dashboards or mobile applications.
 
-## ---
-
-**Key Tasks & Analysis**
+## **Key Tasks & Analysis**
 
 The notebook executes four primary analytical tasks:
 
@@ -49,11 +43,9 @@ The notebook executes four primary analytical tasks:
 | **C: Line Recidivism** | Identify "problem routes" with high-frequency streaks. |  **32 Eglinton West** is the most problematic route (1,640+ streaks). |
 | **D: Root Cause** | Map cryptic codes to human-readable descriptions. |  **'EFO' (Other)** and **'MFSH' (Used as Shuttle)** are the top causes. |
 
-## ---
+## **Findings & Insights**
 
-**Findings & Insights**
-
-* **The "Eglinton Effect":** Statistical analysis confirms that the **32 Eglinton West** route is heavily impacted by LRT construction and traffic congestion, leading to constant bus bunching.
+* **The Eglinton Effect:** Statistical analysis confirms that the **32 Eglinton West** route is heavily impacted by LRT construction and traffic congestion, leading to constant bus bunching.
 
 * **Data Integrity:** A high volume of delays are labeled as "Other," suggesting the TTC could improve their tracking process to record more specific reasons for service gaps.
 
